@@ -3,7 +3,7 @@ def max_proProductofThree(array, n):
  max_pro=1
  if n<=3:
   while i<n:
-   max_pro *= array[i]
+   max_pro*=array[i]
    i+=1
   return max_pro
  else:
@@ -18,7 +18,7 @@ def max_proProductofThree(array, n):
     if array[j]>array[j+1]:
      array[j],array[j+1]=array[j+1],array[j]
     j+=1
-   i+= 1
+   i+=1
  while v>=-3:
   max_pro_1*=array[v]
   v-=1
@@ -31,25 +31,25 @@ def max_proProductofThree(array, n):
  else:
   return max_pro_1"""
 #secand approch forward O(n) and we dont have to know the size
- max1 = max2 = max3 =-1000000
- min1 = min2 = 1000000
+ max1=max2=max3=-1000000
+ min1=min2=1000000
  for item in array:
-  if item > max1:
-   max3 = max2
-   max2 = max1
-   max1 = item
-  elif item > max2:
-   max3 = max2
-   max2 = item 
-  elif item > max3:
-   max3 = item
-  if item < min1:
-   min2 = min1
-   min1 = item
-  elif item < min2:
-   min2 = item
- max_pro_1 = max1 * max2 * max3
- max_pro_2 = max1 * min1 * min2
+  if item>max1:
+   max3=max2
+   max2=max1
+   max1=item
+  elif item>max2:
+   max3=max2
+   max2=item 
+  elif item>max3:
+   max3=item
+  if item<min1:
+   min2=min1
+   min1=item
+  elif item<min2:
+   min2=item
+ max_pro_1=max1*max2*max3
+ max_pro_2=max1*min1*min2
 
  if max_pro_1>=max_pro_2:
    return max_pro_1
