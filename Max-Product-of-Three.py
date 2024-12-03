@@ -1,16 +1,17 @@
-def max_proProductofThree(array, n):  # Bubble Sort O(n^2) for the easy approach and we have to know the size
+def max_proProductofThree(array, n): 
+ #best case  
  max_pro=1
- max_pro_1=1
- i=0
- v=-1
- d = 0
  if n<=3:
   while i<n:
    max_pro *= array[i]
    i+=1
   return max_pro
  else:
-  """
+  """ # Bubble Sort O(n^2) for the easy approach and we have to know the size
+  max_pro_1=1
+  i=0
+  v=-1
+  d=0
   while i<n:
    j=0
    while j<n-i-1:
