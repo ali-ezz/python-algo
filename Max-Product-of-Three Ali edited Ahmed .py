@@ -1,7 +1,9 @@
+#forward O(n)
+"""
 def max_product_of_three(array):
     n = 0 
     for idex in array: 
-     n += 1  #i stall it from ahme
+     n += 1  
     # Best case
     if n <= 3:
         max_pro = 1
@@ -42,7 +44,12 @@ print(max_product_of_three(array))
 
 #count sort O(n)
 """
-def max_product_of_three(array, n):
+#count sort O(n)
+"""
+def max_product_of_three(array):
+    n = 0 
+    for idex in array: 
+     n += 1 
     max_pro_1 = 1
     v = -1
     d = 0
@@ -99,10 +106,9 @@ def max_product_of_three(array, n):
     else:
         return max_pro_1
 
-array=[1,10,2,6,5,3]
-print(max_product_of_three(array,6))
+array=[-10,-10,4,3]
+print(max_product_of_three(array))
 """
-
 # Bubble Sort O(n^2) for the easy approach and we have to know the size
 """
   max_pro_1=1
