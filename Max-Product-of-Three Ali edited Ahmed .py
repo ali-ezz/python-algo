@@ -133,4 +133,6 @@ print(max_product_of_three(array))
   return max_pro_2
  else:
   return max_pro_1
+array=[1,10,2,6,5,3]
+print(max_product_of_three(array))
 """
