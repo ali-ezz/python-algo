@@ -1,11 +1,11 @@
 def max_product_of_three(array):
     n = 0 
     for idex in array: 
-     n += 1  
+     n += 1  #i stall it from ahmed
     # Best case
     if n <= 3:
         max_pro = 1
-        i = 0  # Initialize i
+        i = 0 
         while i < n:
             max_pro *= array[i]
             i += 1
@@ -37,7 +37,7 @@ def max_product_of_three(array):
             return max_pro_1
         else:
             return max_pro_2
-array=[1,2,3]
+array=[1,10,2,6,5,3]
 print(max_product_of_three(array))
 # Bubble Sort O(n^2) for the easy approach and we have to know the size
 """
