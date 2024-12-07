@@ -63,36 +63,3 @@ print(max_product_of_three(array))
   return max_pro_2
  else:
   return max_pro_1"""
-#thered approch in work
-"""max_pro_int=-1000000
-  smal_int=100000
-  array1=array
-  array2=array
-  c=n
-  r=n
-  for d in range(3):
-   for e in range(c):
-    if max_pro_int<=array1[e]:
-     max_pro_int=array1[e]
-   for t in range(r):
-    if smal_int>=array2[t]:
-     smal_int=array2[t]
-   max_pro_item1.append(max_pro_int)
-   max_pro_item2.append(smal_int)
-   array1.remove(max_pro_int)
-   c-=1
-   array2.remove(smal_int)
-   r-=1
-   max_pro_int=-1000000
-   smal_int=100000
-
-
-  for v in range(3):
-   max_pro*=max_pro_item1[v]
-  max_pro2=max_pro_item1[0]
-  for g in range(2):
-   max_pro2*=max_pro_item2[g]
-  if(max_pro>=max_pro2):
-   return max_pro
-  else:
-   return max_pro2"""
