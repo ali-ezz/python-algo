@@ -1,7 +1,7 @@
 def max_product_of_three(array):
     n = 0 
     for idex in array: 
-     n += 1  #i stall it from ahmed
+     n += 1  #i stall it from ahme
     # Best case
     if n <= 3:
         max_pro = 1
