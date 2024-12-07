@@ -89,5 +89,5 @@ def max_proProductofThree(array, n):
    return max_pro
   else:
    return max_pro2"""
-array=[1,2,3,4]
+array=[1,2,3,-4,5,-7]
 print(max_proProductofThree(array,8))
