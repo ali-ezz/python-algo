@@ -39,6 +39,7 @@ def max_product_of_three(array):
             return max_pro_2
 array=[1,10,2,6,5,3]
 print(max_product_of_three(array))
+
 #count sort O(n)
 """
 def max_product_of_three(array, n):
@@ -101,6 +102,7 @@ def max_product_of_three(array, n):
 array=[1,10,2,6,5,3]
 print(max_product_of_three(array,6))
 """
+
 # Bubble Sort O(n^2) for the easy approach and we have to know the size
 """
   max_pro_1=1
