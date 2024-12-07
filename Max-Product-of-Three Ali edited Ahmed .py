@@ -39,6 +39,68 @@ def max_product_of_three(array):
             return max_pro_2
 array=[1,10,2,6,5,3]
 print(max_product_of_three(array))
+#count sort O(n)
+"""
+def max_product_of_three(array, n):
+    max_pro_1 = 1
+    v = -1
+    d = 0
+
+    max_val = array[0]
+    min_val = array[0]
+    i = 1
+    while i < n:
+        if array[i] > max_val:
+            max_val = array[i]
+        if array[i] < min_val:
+            min_val = array[i]
+        i += 1
+    range_of_elements = max_val - min_val + 1
+
+    count_size = range_of_elements
+    count = [0] * count_size  
+    output = [0] * n          
+
+    i = 0
+    while i < n:
+        index = array[i] - min_val
+        count[index] += 1
+        i += 1
+
+    i = 1
+    while i < count_size:
+        count[i] += count[i - 1]
+        i += 1
+
+    i = n - 1
+    while i >= 0:
+        index = array[i] - min_val
+        count[index] -= 1
+        output[count[index]] = array[i]
+        i -= 1
+
+    i = 0
+    while i < n:
+        array[i] = output[i]
+        i += 1
+
+    while v >= -3:
+        max_pro_1 *= array[v]
+        v -= 1
+
+    max_pro_2 = array[-1]
+    while d < 2:
+        max_pro_2 *= array[d]
+        d += 1
+
+    if max_pro_2 >= max_pro_1:
+        return max_pro_2
+    else:
+        return max_pro_1
+
+array=[1,10,2,6,5,3]
+print(max_product_of_three(array,6))
+"""
 # Bubble Sort O(n^2) for the easy approach and we have to know the size
 """
   max_pro_1=1
@@ -62,4 +124,5 @@ print(max_product_of_three(array))
  if max_pro_2>=max_pro_1:
   return max_pro_2
  else:
-  return max_pro_1"""
+  return max_pro_1
+"""
