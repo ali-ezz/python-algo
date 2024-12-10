@@ -6,7 +6,7 @@ def max_product_of_three(array):
     max_pro_1 = 1
     v = -1
     d = 0
-    #best case
+    #best case or like that
     if n==0:
      return "no item in the array"
     elif n<3 and n>0:
