@@ -1,0 +1,125 @@
+// Input: two sorted arrays
+
+// Output: the median of the two sorted arrays
+
+FUNCTION my_len(sequence):
+    // Initialize count
+    count ← 0
+    // Iterate through each element in sequence
+    FOR each element IN sequence DO
+        // Increment count
+        count ← count + 1
+    // Return the length of the sequence
+    RETURN count
+
+FUNCTION my_append(lst, element):
+    // Append element to the end of lst
+    lst[my_len(lst)] ← element
+
+FUNCTION input_and_validate_integer_arrays():
+    // Initialize a loop for input validation
+    LOOP FOREVER DO
+        // Try to get input for the first array
+        TRY
+            // Get input as a string
+            array1_str ← INPUT("Enter the first array of integers (comma-separated): ")
+            // Initialize an empty list for the first array
+            array1 ← []
+            // Initialize index variable
+            i ← 0
+            // Iterate through the input string
+            WHILE i < my_len(array1_str) DO
+                // Check if the current character is not a space or comma
+                IF array1_str[i] ≠ ' ' AND array1_str[i] ≠ ',' THEN
+                    // Store the starting index of the number
+                    start ← i
+                    // Find the end index of the number
+                    WHILE i < my_len(array1_str) AND array1_str[i] ≠ ' ' AND array1_str[i] ≠ ',' DO
+                        // Increment the index
+                        i ← i + 1
+                    // Convert the substring to an integer and append to the array
+                    my_append(array1, TO_INTEGER(array1_str[start:i]))
+                // Increment the index
+                i ← i + 1
+
+            // Get input for the second array
+            array2_str ← INPUT("Enter the second array of integers (comma-separated): ")
+            // Initialize an empty list for the second array
+            array2 ← []
+            // Initialize index variable
+            i ← 0
+            // Iterate through the input string
+            WHILE i < my_len(array2_str) DO
+                // Check if the current character is not a space or comma
+                IF array2_str[i] ≠ ' ' AND array2_str[i] ≠ ',' THEN
+                    // Store the starting index of the number
+                    start ← i
+                    // Find the end index of the number
+                    WHILE i < my_len(array2_str) AND array2_str[i] ≠ ' ' AND array2_str[i] ≠ ',' DO
+                        // Increment the index
+                        i ← i + 1
+                    // Convert the substring to an integer and append to the array
+                    my_append(array2, TO_INTEGER(array2_str[start:i]))
+                // Increment the index
+                i ← i + 1
+
+            // If all elements are integers, return the arrays
+            RETURN array1, array2
+
+        // Handle invalid input
+        EXCEPT ValueError DO
+            // Print error message
+            PRINT("Invalid input. Please re-enter the last array.")
+            // Continue to the next iteration of the loop
+            CONTINUE
+
+FUNCTION merge_sorted_arrays(arr1, arr2):
+    // Initialize merged_arr as an empty list
+    merged_arr ← []
+    // Initialize indices i and j
+    i ← 0, j ← 0
+    // Merge arrays while both have elements
+    WHILE i < my_len(arr1) AND j < my_len(arr2) DO
+        IF arr1[i] < arr2[j] THEN
+            // Append arr1[i] to merged_arr
+            my_append(merged_arr, arr1[i])
+            // Increment i
+            i ← i + 1
+        ELSE
+            // Append arr2[j] to merged_arr
+            my_append(merged_arr, arr2[j])
+            // Increment j
+            j ← j + 1
+    // Append remaining elements of arr1
+    WHILE i < my_len(arr1) DO
+        my_append(merged_arr, arr1[i])
+        i ← i + 1
+    // Append remaining elements of arr2
+    WHILE j < my_len(arr2) DO
+        my_append(merged_arr, arr2[j])
+        j ← j + 1
+    // Return the merged array
+    RETURN merged_arr
+
+FUNCTION find_median(merged_arr):
+    // Get the length of merged_arr
+    n ← my_len(merged_arr)
+    // Check if the length is even
+    IF n % 2 == 0 THEN
+        // Return the average of the two middle elements
+        RETURN (merged_arr[n/2 - 1] + merged_arr[n/2]) / 2
+    ELSE
+        // Return the middle element
+        RETURN merged_arr[n/2]
+
+FUNCTION find_median_of_merged_arrays(arr1, arr2):
+    // Merge the two sorted arrays
+    merged_arr ← merge_sorted_arrays(arr1, arr2)
+    // Find and return the median of the merged array
+    RETURN find_median(merged_arr)
+
+// Get the two arrays from the user
+array1, array2 ← input_and_validate_integer_arrays()
+// Calculate and print the median
+median ← find_median_of_merged_arrays(array1, array2)
+PRINT("Median:", median)
