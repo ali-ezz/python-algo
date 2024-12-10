@@ -65,7 +65,7 @@ def max_product_of_three(array):
         return max_pro_2
     else:
         return max_pro_1
-#test
+#test only on intgers
 array=[1,2,3,-10,-15]
 print(max_product_of_three(array))
 
