@@ -6,6 +6,7 @@ def max_product_of_three(array):
     max_pro_1 = 1
     v = -1
     d = 0
+    #best case
     if n<3 and n>0:
         for item in array:
             max_pro_1*=item
@@ -74,6 +75,13 @@ Function max_product_of_three(array):
     max_pro_1 ← 1                 # O(1)
     v ← -1                        # O(1)
     d ← 0                         # O(1)
+
+    If n < 3 and n > 0 then:            # O(1)
+     For each item in array:            # O(n)
+      max_pro_1 ← max_pro_1 × item      # O(1)
+     End
+     Return max_pro_1                   # O(1)
+    EndIf
 
     # إيجاد القيمة الكبرى والصغرى في المصفوفة - O(n)
     max_val ← array[0]
