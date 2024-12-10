@@ -7,10 +7,13 @@ def max_product_of_three(array):
     v = -1
     d = 0
     #best case
-    if n<3 and n>0:
+    if n==0:
+     return "no item in the array"
+    elif n<3 and n>0:
         for item in array:
             max_pro_1*=item
         return max_pro_1
+    
     max_val = array[0]
     min_val = array[0]
     i = 1
@@ -63,7 +66,7 @@ def max_product_of_three(array):
     else:
         return max_pro_1
 #test
-array=[10,10,4,3]
+array=[1,2,3,-10,-15]
 print(max_product_of_three(array))
 
 #pascode me and time complexity chat and me (;
@@ -75,7 +78,8 @@ Function max_product_of_three(array):
     max_pro_1 ← 1                 # O(1)
     v ← -1                        # O(1)
     d ← 0                         # O(1)
-
+    If n < 3 and n > 0 then: 
+     Return "no item in"
     If n < 3 and n > 0 then:            # O(1)
      For each item in array:            # O(n)
       max_pro_1 ← max_pro_1 × item      # O(1)
