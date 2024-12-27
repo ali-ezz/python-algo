@@ -1,0 +1,75 @@
+def recursive(arr, index=0):
+    try:
+        VC = arr[index]
+        return 1 + recursive(arr, index + 1)
+    except IndexError:
+        return 0
+def mg(nums):
+    n = recursive(nums)
+    if n > 1:
+        mid = n // 2
+        l = nums[:mid]
+        r = nums[mid:]
+        mg(l)
+        mg(r)
+        i = j = k = 0
+        lf = recursive(l)
+        lr = recursive(r)  
+        while i < lf and j < lr:
+            if l[i] < r[j]:
+                nums[k] = l[i] 
+                i += 1
+            else:
+                nums[k] = r[j]
+                j += 1
+            k += 1
+        while i < lf:
+            nums[k] = l[i]
+            i += 1
+            k += 1
+        while j < lr:
+            nums[k] = r[j]
+            j += 1
+            k += 1
+    return nums
+def middle(nums1, nums2, s1, s2):
+    arr = mg(nums1 + nums2)
+    n = s1 + s2
+    mid = n // 2
+    if n%2==0:
+        return (arr[mid-1]+arr[mid])/2
+    else:
+        return arr[mid]
+while True:
+    try:
+        s1 = int(input("Enter size of array1: "))
+        if s1 > 0:
+            break
+        print("Please enter a positive number")
+    except ValueError:
+        print("Please enter a positive number")
+while True:
+    try:
+        s2 = int(input("Enter size of array2: "))
+        if s1 > 0:
+            break
+        print("Please enter a positive number")
+    except ValueError:
+        print("Please enter a positive number")
+nums1 = [0] * s1
+for i in range(s1):
+    while True:
+        try:
+            nums1[i] = float(input(f"Enter element {i + 1} for array1: "))
+            break
+        except ValueError:
+            print("Please enter a valid number")
+nums2 = [0] * s2
+for i in range(s2):
+    while True:
+        try:
+            nums2[i] = float(input(f"Enter element {i + 1} for array2: "))
+            break
+        except ValueError:
+            print("Please enter a valid number")
+print(f"The middle is: {middle(nums1, nums2, s1, s2)}")
