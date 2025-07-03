@@ -4,7 +4,7 @@ This repository contains my university algorithms assignment where I implemented
 
 ## 📌 Task Details
 - **Project name**: Algorithms Tasks
-- **Course**: Algorithms (COMXXX)
+- **Course**: Algorithms 
 - **Grade weight**: 10 points
 - **Rules**: No plagiarism, no built-in sort, max, etc.
 
