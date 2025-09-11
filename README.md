@@ -6,7 +6,7 @@ This repository contains my university algorithms assignment where I implemented
 - **Project name**: Algorithms Tasks
 - **Course**: Algorithms 
 - **Grade weight**: 10 points
-- **Rules**: No plagiarism, no built-in sort, max, etc.
+- **Rules**: No plagiarism, no built-in sort, max,etc.
 
 ## ✏️ Implemented Algorithms
 
