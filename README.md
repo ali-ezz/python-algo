@@ -1,47 +1,72 @@
-# Algorithms Tasks 🧮
+# Python Algorithms Tasks
 
-This repository contains my university algorithms assignment where I implemented two classic problems **from scratch**, without using built-in Python functions:
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
+![Language](https://img.shields.io/badge/language-Python-blue.svg)
 
-## 📌 Task Details
-- **Project name**: Algorithms Tasks
-- **Course**: Algorithms 
-- **Grade weight**: 10 points
-- **Rules**: No plagiarism, no built-in sort, max,etc.
+A concise repository of Python algorithm solutions for educational assignments and practice. The focus is on clear implementations of core algorithmic problems using Python.
 
-## ✏️ Implemented Algorithms
+## Project overview
 
-### 1️⃣ Max Product of Three
-Given a non-empty zero-indexed array A, find the maximal product of any triplet (P, Q, R).  
-**Example:**
-- Input: `[1,2,3,4]`
-- Output: `24`
+This repository contains implementations and analysis for algorithm problems such as maximum product of three numbers, median of two sorted arrays, and additional sorting/selection tasks.
 
-Includes:
-- Pseudocode
-- Algorithm analysis
-- Time complexity calculation
+## Quick start
 
----
+1. Install Python 3.8 or later.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/ali-ezz/python-algo.git
+   cd python-algo
+   ```
+3. Run a script directly:
+   ```bash
+   python3 Median-of-Two-Sorted-Arrays.py
+   ```
 
-### 2️⃣ Median of Two Sorted Arrays
-Given two sorted arrays `nums1` and `nums2`, return the median of the merged sorted array.  
-**Example:**
-- Input: `nums1 = [1, 3]`, `nums2 = [2]`
-- Output: `2`
+## Features
 
-Includes:
-- Pseudocode
-- Algorithm analysis
-- Time complexity calculation
+- Python implementations of algorithm problems.
+- Educational code structure with comments and pseudocode references.
+- No external dependencies required.
+- Ready for review and incremental improvement.
 
----
+## Usage examples
 
-## 📊 Features
-- Fully documented code with comments and docstrings.
-- Simple, clear logic – no built-in Python shortcuts.
-- Written for educational and learning purposes.
+Run a solution directly with Python:
+```bash
+python3 count-sort-max_all-ali.py
+python3 Max-Product-of-Three\ Ali\ all\ .py
+python3 Median-of-Two-Sorted-Arrays.py
+```
 
-## ⚙️ Requirements
-- Python 3.x
+> Note: Some filenames include spaces; use quotes or escape spaces when running from the terminal.
 
-## 📂 Structure
+## File layout
+
+- `count-sort-max_all-ali.py` — maximum value selection and sort-related logic.
+- `Max-Product-of-Three Ali all .py` — maximal product of any triplet.
+- `Median-of-Two-Sorted-Arrays.py` — median search on two sorted arrays.
+- `median_sabry.py`, `median_sabry_hib 2.py`, `median_merge` — median calculations and merge-based logic.
+- `max_Ahmed abo bakr.py`, `max_formard` — additional maximum-value exercises.
+- `Pseudocode for median_sabry.txt` — algorithm pseudocode and analysis notes.
+- `The doc of the project.pdf` — project documentation.
+- `LICENSE` — project license.
+- `CONTRIBUTING.md` — contribution guidelines.
+- `CODE_OF_CONDUCT.md` — community behavior expectations.
+- `SECURITY.md` — vulnerability reporting guidance.
+- `.github/` — issue and pull request templates, code owners.
+
+## Contributing
+
+See `CONTRIBUTING.md` for instructions on opening issues and pull requests.
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+## Policies
+
+- `CODE_OF_CONDUCT.md` — expected contributor behavior.
+- `SECURITY.md` — how to report security issues.
+- `.github/ISSUE_TEMPLATE/` — bug report and feature request templates.
+- `.github/PULL_REQUEST_TEMPLATE.md` — pull request guidance.
